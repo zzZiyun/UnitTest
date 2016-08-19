@@ -1,5 +1,7 @@
 package com.zz.lambdatest.mockito;
 
+import android.util.Log;
+
 /**
  * <p>Description: com.zz.lambdatest.mockito</p>
  * <p>Copyright (c) 2016 www.oppo.com Inc. All rights reserved.</p>
@@ -11,5 +13,6 @@ package com.zz.lambdatest.mockito;
 public class UserModel {
     public void performLogin(String userName, String password){
         // TODO: 2016/8/6 login
+        Log.e("", "performLogin: performLogin()");
     }
 }

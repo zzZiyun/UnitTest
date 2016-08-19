@@ -1,19 +1,27 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt' // 注释处理
 apply plugin: 'me.tatarka.retrolambda'
 
+
 android {
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
         applicationId "com.zz.lambdatest"
-        minSdkVersion 14
-        targetSdkVersion 22
+        minSdkVersion 15
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
 
-//        //ADD THIS LINE:
-//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        ndk {
+//           // 设置支持的SO库架构
+//            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+//        }
+    }
+
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
     }
 
     buildTypes {
@@ -32,28 +40,30 @@ android {
         abortOnError false
     }
 
-    dataBinding{
+    dataBinding {
         enabled true
     }
 
-//    //ADD THESE LINES:
-//    packagingOptions {
-//        exclude 'LICENSE.txt'
-//    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.3.0'
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:22.0.1'
+
+    //lambda
     compile 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
-    //    //ADD THESE LINES:
-    //    androidTestCompile 'com.android.support.test:runner:0.4'
-    //    // Set this dependency to use JUnit 4 rules
-    //    androidTestCompile 'com.android.support.test:rules:0.4'
-    //    // Set this dependency to build and run Espresso tests
-    //    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
-    // Set this dependency to build and run UI Automator tests
-    //    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
-    compile 'org.mockito:mockito-core:2.0.98-beta'
+
+    //Mockito & Robolectric
+    testCompile 'org.mockito:mockito-core:2.0.98-beta'
+    testCompile 'org.robolectric:robolectric:3.1.2'
+    testCompile 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
+
+    //dagger2
+    compile 'com.google.dagger:dagger:2.6'
+    compile 'javax.annotation:jsr250-api:1.0'
+    apt 'com.google.dagger:dagger-compiler:2.6'
+
+
+
 }

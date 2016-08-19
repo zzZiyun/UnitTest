@@ -18,8 +18,7 @@ public class LoginPresenter {
     }
 
     public void login(String userName, String password) {
-//        if (checkLoginInfo(userName, password))
-//            return;
+        if (!checkLoginInfo(userName, password)) return;
 
         mUserModel.performLogin(userName, password);
     }

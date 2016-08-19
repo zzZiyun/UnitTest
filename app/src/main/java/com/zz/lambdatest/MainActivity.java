@@ -1,13 +1,19 @@
 package com.zz.lambdatest;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import com.zz.lambdatest.dagger2.DaggerLoginActivity;
 import com.zz.lambdatest.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends BaseActivity {
+
+    List<User> mUserList = new ArrayList<>(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,9 +23,28 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(this, "11111", Toast.LENGTH_SHORT).show()
 //        );
 
-        ActivityMainBinding databinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        databinding.activityMainTestTv.setOnClickListener((v -> Toast.makeText(this, "11111", Toast.LENGTH_SHORT)
+        ActivityMainBinding dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        dataBinding.activityMainTestTv.setOnClickListener((v -> Toast.makeText(this, "11111", Toast.LENGTH_SHORT)
                 .show()));
+        dataBinding.activityDagger2TestBtn.setOnClickListener(v -> startDagger2TestActivity());
 
+        User user = new User("11");
+        mUserList.add(user);
+
+    }
+
+    private void startDagger2TestActivity() {
+        Intent intent = new Intent();
+        intent.setClass(this, DaggerLoginActivity.class);
+        startActivity(intent);
+    }
+
+
+    public static class User {
+        private String mUserName;
+
+        public User(String userName) {
+            mUserName = userName;
+        }
     }
 }
