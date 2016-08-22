@@ -1,8 +1,7 @@
-package com.zz.lambdatest.dagger2;
+package com.zz.unittest.dagger2;
 
 
-import com.zz.lambdatest.mockito.LoginPresenter;
-import com.zz.lambdatest.mockito.UserModel;
+import com.zz.unittest.mockito.UserModel;
 
 import dagger.Module;
 import dagger.Provides;

@@ -1,6 +1,8 @@
-package com.zz.lambdatest.mockito;
+package com.zz.unittest.dagger2;
 
 import android.text.TextUtils;
+
+import com.zz.unittest.mockito.UserModel;
 
 /**
  * <p>Description: com.zz.lambdatest.mockito</p>
@@ -10,7 +12,7 @@ import android.text.TextUtils;
  * @author ZhengZhong
  *         Created at 2016/8/6.
  */
-public class LoginPresenter {
+class LoginPresenter {
     private UserModel mUserModel;
 
     public LoginPresenter(UserModel userModel) {

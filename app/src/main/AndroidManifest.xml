@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.zz.lambdatest">
+          package="com.zz.unittest">
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.zz.unittest" >
+    </instrumentation>
 
     <application
         android:name=".UnitApplication"
@@ -15,8 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--<activity android:name=".dagger2.DaggerLoginActivity">-->
-        <!--</activity>-->
+        <!-- <activity android:name=".dagger2.DaggerLoginActivity"> -->
+        <!-- </activity> -->
+        <activity android:name=".instrumentation.InstLoginActivity">
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
     </application>
 
 </manifest>

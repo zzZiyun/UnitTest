@@ -1,4 +1,4 @@
-package com.zz.lambdatest;
+package com.zz.unittest;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

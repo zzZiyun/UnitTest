@@ -1,11 +1,11 @@
-package com.zz.lambdatest;
+package com.zz.unittest;
 
 import android.app.Application;
 
-import com.zz.lambdatest.dagger2.AppComponent;
-import com.zz.lambdatest.dagger2.AppModule;
-import com.zz.lambdatest.dagger2.ComponentHolder;
-import com.zz.lambdatest.dagger2.DaggerAppComponent;
+import com.zz.unittest.dagger2.AppComponent;
+import com.zz.unittest.dagger2.AppModule;
+import com.zz.unittest.dagger2.ComponentHolder;
+import com.zz.unittest.dagger2.DaggerAppComponent;
 
 /**
  * <p>Description: com.zz.lambdatest</p>

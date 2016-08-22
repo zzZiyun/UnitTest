@@ -1,4 +1,4 @@
-package com.zz.lambdatest.mockito;
+package com.zz.unittest.mockito;
 
 import org.junit.Before;
 import org.junit.Test;

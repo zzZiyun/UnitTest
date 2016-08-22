@@ -1,11 +1,10 @@
-package com.zz.lambdatest.dagger2;
+package com.zz.unittest.dagger2;
 
 
 import android.widget.EditText;
 
-import com.zz.lambdatest.R;
-import com.zz.lambdatest.mockito.LoginPresenter;
-import com.zz.lambdatest.mockito.UserModel;
+import com.zz.unittest.R;
+import com.zz.unittest.mockito.UserModel;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

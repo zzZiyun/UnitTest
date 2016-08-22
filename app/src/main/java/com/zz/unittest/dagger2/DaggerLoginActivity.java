@@ -1,11 +1,10 @@
-package com.zz.lambdatest.dagger2;
+package com.zz.unittest.dagger2;
 
 import android.os.Bundle;
 import android.widget.EditText;
 
-import com.zz.lambdatest.BaseActivity;
-import com.zz.lambdatest.R;
-import com.zz.lambdatest.mockito.LoginPresenter;
+import com.zz.unittest.BaseActivity;
+import com.zz.unittest.R;
 
 import javax.inject.Inject;
 

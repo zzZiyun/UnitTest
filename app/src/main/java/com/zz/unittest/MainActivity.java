@@ -1,12 +1,12 @@
-package com.zz.lambdatest;
+package com.zz.unittest;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.zz.lambdatest.dagger2.DaggerLoginActivity;
-import com.zz.lambdatest.databinding.ActivityMainBinding;
+import com.zz.unittest.dagger2.DaggerLoginActivity;
+import com.zz.unittest.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 import java.util.List;

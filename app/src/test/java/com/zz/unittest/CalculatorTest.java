@@ -1,4 +1,4 @@
-package com.zz.lambdatest;
+package com.zz.unittest;
 
 import org.junit.Before;
 import org.junit.Test;
